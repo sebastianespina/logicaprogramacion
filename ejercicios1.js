@@ -1,15 +1,6 @@
-let numeroSecreto = 6;
-let numeroUsuario = prompt('Me Indicas un número por favor:');
+/*Desafíos1
 
-console.log(numeroUsuario);
 
-if(numeroUsuario == numeroSecreto) {
-    alert('Acertaste el número');
-}
-
-/*Desafíos
-
-/*
 1 Muestra una alerta con el mensaje "¡Bienvenida y bienvenido a nuestro sitio web!".
 2 Declara una variable llamada nombre y asígnale el valor "Lua".
 3 Crea una variable llamada edady asígnale el valor 25.
@@ -36,3 +27,28 @@ console.log(edad);
 if(edad >= 18) {
     alert('¡Puedes obtener tu licencia de conducir!');
 }
+
+//edad conducir
+alert("edad de conmducir");
+let edade = prompt("Ingrese su edad:");
+
+if (edade >= 18) {
+  console.log("Eres mayor de edad.");
+} else {
+  console.log("Eres menor de edad.");
+}
+//numero secreto
+alert('Bienvenido al juego del número secreto');
+let intento = prompt('Elige un número entre 1 y 10');
+
+let numeroSecreto = 4;
+
+console.log(intento  == numeroSecreto);
+if (intento  == numeroSecreto) {
+    alert('Acertaste');
+} else {
+    alert('El número secreto era ' + numeroSecreto);
+}
+
+
+

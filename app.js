@@ -1,20 +1,37 @@
     //variables
-    let numeroSecreto = 4;
+    let numeroMaximoPosible = 100;
+    let numeroSecreto = Math.floor(Math.random()*numeroMaximoPosible) + 1;
     let numeroUsuario = 0;
-    while (numeroUsuario != numeroSecreto) {
-        numeroUsuario = prompt('Me Indicas un número por favor:');
+    let intentos = 1;
+    //let palabraVeces = 'vez';
+    let maximosIntentos =6;
 
-    console.log(numeroUsuario);
-    if(numeroUsuario == numeroSecreto) {
-        //acertamos la condicion se cumplio
-        alert(`Acertaste, el número es: ${numeroUsuario}`);
-    } else {
-        if (numeroUsuario > numeroSecreto) {
-            alert('El numero secreto es menor');    
+    
+    while (numeroUsuario != numeroSecreto) {
+        numeroUsuario = parseInt(prompt(`Me Indicas un número entre 1 y ${numeroMaximoPosible}  por favor:`));
+
+        console.log(typeof(numeroUsuario));
+        if(numeroUsuario == numeroSecreto) {
+            //acertamos la condicion se cumplio
+            alert(`Acertaste, el número es: ${numeroUsuario}. Lo hiciste en ${intentos} ${intentos == 1 ? 'vez' : 'veces' }`);
         } else {
-            alert('el numero secreto es mayor');
-        }
-        //la condicion no se cumple
-        //alert('Lo siento no acertaste el numero');
+            if (numeroUsuario > numeroSecreto) {
+                alert('El numero secreto es menor');    
+            } else {
+                alert('el numero secreto es mayor');
+            }
+            //incrementamos el contador cuando no acierta
+            //intentos = intentos + 1;
+            //intentos += 1;
+            intentos ++;
+
+            //palabraVeces = 'veces';
+            if (intentos > maximosIntentos) {
+                alert(`Llegaste al numero maximo de ${maximosIntentos} intentos`);
+                break;
+            }
+            //la condicion no se cumple
+            //alert('Lo siento no acertaste el numero');
     }
 }    
+
